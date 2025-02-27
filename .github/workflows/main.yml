@@ -18,4 +18,4 @@ jobs:
       # - name: Get the output time
       #   run: echo "The time was ${{ steps.hello.outputs.time }}"
       - name: Get the match output
-        run: echo {{ steps.hello.outputs.match }}
+        run: echo "${{ steps.hello.outputs.match }}"
