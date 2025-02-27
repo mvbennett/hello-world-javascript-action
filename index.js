@@ -2,9 +2,9 @@ const core = require("@actions/core");
 const github = require("@actions/github");
 const fs = require("fs");
 
-const onePath = "./one.json";
-const twoPath = "./two.json";
-const threePath = "./three.json";
+const onePath = "../one.json";
+const twoPath = "../two.json";
+const threePath = "../three.json";
 
 function getNum(path) {
   const file = fs.readFileSync(path, "utf-8");

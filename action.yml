@@ -13,4 +13,4 @@ outputs:
     description: "The match message"
 runs:
   using: "node20"
-  main: "index.js"
+  main: "dist/index.js"
