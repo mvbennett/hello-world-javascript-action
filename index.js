@@ -26,7 +26,7 @@ try {
   // const payload = JSON.stringify(github.context.payload, undefined, 2);
   // console.log(`The event payload: ${payload}`);
   const one = true;
-  const two = true;
+  const two = false;
   if (one === two) {
     return core.setOutput("match", "wow great job");
   }
