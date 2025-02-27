@@ -18,5 +18,5 @@ jobs:
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
       - name: fail
-        if: ${{ steps.hello.output.time }} != ${{ steps.hello.output.false }}
+        if: ${{ steps.hello.output.stuff }} != ${{ steps.hello.output.things }}
         run: exit 1
