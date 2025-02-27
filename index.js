@@ -22,6 +22,9 @@ try {
     core.setOutput("two", twoNum);
     core.setOutput("three", threeNum);
   } else {
+    const errorString = `
+      no match! \none: ${oneNum}\ntwo: ${twoNum}\nthree: ${threeNum}
+    `;
     throw new Error(
       `no match! ${{
         one: oneNum,
