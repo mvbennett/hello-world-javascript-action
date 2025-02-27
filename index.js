@@ -22,9 +22,7 @@ try {
     core.setOutput("two", twoNum);
     core.setOutput("three", threeNum);
   } else {
-    const errorString = `
-      no match! \none: ${oneNum}\ntwo: ${twoNum}\nthree: ${threeNum}
-    `;
+    const errorString = `no match! \none: ${oneNum}\ntwo: ${twoNum}\nthree: ${threeNum}`;
     throw new Error(errorString);
   }
   // // Get the JSON webhook payload for the event that triggered the workflow
