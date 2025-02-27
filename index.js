@@ -27,10 +27,10 @@ try {
   // console.log(`The event payload: ${payload}`);
   const one = true;
   const two = false;
-  if (one === two) {
-    return core.setOutput("match", "wow great job");
+  if (one != two) {
+    throw new Error("no match!");
   }
-  throw new Error("no match!");
+  core.setOutput("match", "wow great job");
 } catch (error) {
   core.setFailed(error.message);
 }
