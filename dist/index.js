@@ -31828,14 +31828,15 @@ module.exports = parseParams
 var __webpack_exports__ = {};
 const core = __nccwpck_require__(5980);
 const github = __nccwpck_require__(620);
+const path = __nccwpck_require__(6928);
 const fs = __nccwpck_require__(9896);
 
-const onePath = "../one.json";
-const twoPath = "../two.json";
-const threePath = "../three.json";
+const onePath = path.root + "one.json";
+const twoPath = "two.json";
+const threePath = "three.json";
 
-function getNum(path) {
-  const file = fs.readFileSync(path, "utf-8");
+function getNum(filepath) {
+  const file = fs.readFileSync(filepath, "utf-8");
   const number = JSON.parse(file)?.number;
   return number;
 }
