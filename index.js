@@ -25,13 +25,7 @@ try {
     const errorString = `
       no match! \none: ${oneNum}\ntwo: ${twoNum}\nthree: ${threeNum}
     `;
-    throw new Error(
-      `no match! ${{
-        one: oneNum,
-        two: twoNum,
-        three: threeNum,
-      }}`
-    );
+    throw new Error(errorString);
   }
   // // Get the JSON webhook payload for the event that triggered the workflow
   // const payload = JSON.stringify(github.context.payload, undefined, 2);
