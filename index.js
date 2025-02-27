@@ -17,6 +17,7 @@ try {
   const oneNum = getNum(onePath);
   const twoNum = getNum(twoPath);
   const threeNum = getNum(threePath);
+  core.setOutput("match", "wow ");
   if ((oneNum == twoNum) == threeNum) {
     core.setOutput("match", "wow great job!");
   } else {
