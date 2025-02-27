@@ -26,7 +26,7 @@ try {
   // const payload = JSON.stringify(github.context.payload, undefined, 2);
   // console.log(`The event payload: ${payload}`);
   const one = true;
-  const two = false;
+  const two = true;
   if (one != two) {
     throw new Error("no match!");
   }
