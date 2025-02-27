@@ -9,14 +9,13 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Hello world action step
-        uses: ./ # Uses an action in the root directory
-        id: hello
-        with:
-          who-to-greet: "Mona the Octocat"
+      # - name: Hello world action step
+      #   uses: ./ # Uses an action in the root directory
+      #   id: hello
+      #   with:
+      #     who-to-greet: "Mona the Octocat"
       # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
-      - name: fail
-        if: ${{ steps.hello.output.stuff }} != ${{ steps.hello.output.things }}
-        run: exit 1
+      # - name: Get the output time
+      #   run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: Get the match output
+        run: echo {{ steps.hello.outputs.match }}
