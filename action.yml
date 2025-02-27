@@ -5,6 +5,9 @@ description: "Greet someone and record the time"
 #     description: "Who to greet"
 #     required: true
 #     default: "World"
+on:
+  workflow_dispatch:
+  namee: Build
 outputs:
   match: # id of output
     description: "The time we greeted you"
