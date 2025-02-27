@@ -19,7 +19,9 @@ try {
   const threeNum = getNum(threePath);
   if ((oneNum == twoNum) == threeNum) {
     core.setOutput("match", "wow great job!");
+    core.ExitCode(0);
   } else {
+    core.ExitCode(1);
     throw new Error("no match!");
   }
   // Get the JSON webhook payload for the event that triggered the workflow
