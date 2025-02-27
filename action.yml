@@ -1,5 +1,5 @@
-name: "Hello World"
-description: "Greet someone and record the time"
+name: "Asset Version Check"
+description: "Check the asset version"
 # inputs:
 #   who-to-greet: # id of input
 #     description: "Who to greet"
@@ -10,7 +10,7 @@ on:
   namee: Build
 outputs:
   match: # id of output
-    description: "The time we greeted you"
+    description: "The match message"
 runs:
   using: "node20"
   main: "index.js"

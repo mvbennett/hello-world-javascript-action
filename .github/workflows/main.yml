@@ -3,7 +3,7 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Asset Version Check
     steps:
       # To use this repository's private action,
       # you must check out the repository
@@ -11,11 +11,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Install dependencies
         run: npm install
-      - name: Hello world action step
+      - name: Checking Assets Step
         uses: ./ # Uses an action in the root directory
         id: hello
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
       - name: Get the match output
         run: echo "${{ steps.hello.outputs.match }}"
