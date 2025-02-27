@@ -22,7 +22,13 @@ try {
     core.setOutput("two", twoNum);
     core.setOutput("three", threeNum);
   } else {
-    throw new Error("no match!");
+    throw new Error(
+      `no match! ${{
+        one: oneNum,
+        two: twoNum,
+        three: threeNum,
+      }}`
+    );
   }
   // // Get the JSON webhook payload for the event that triggered the workflow
   // const payload = JSON.stringify(github.context.payload, undefined, 2);
