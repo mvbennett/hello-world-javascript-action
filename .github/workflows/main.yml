@@ -15,4 +15,4 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: hello
       - name: Get the match output
-        run: echo "${{ steps.hello.outputs.match }}"
+        run: echo "${{ steps.hello.outputs.match }} \none- ${{ steps.hello.outputs.one }}\ntwo- ${{ steps.hello.outputs.two }}\nthree- ${{ steps.hello.outputs.three }}"
