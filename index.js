@@ -25,15 +25,6 @@ try {
     const errorString = `no match! \none: ${oneNum}\ntwo: ${twoNum}\nthree: ${threeNum}`;
     throw new Error(errorString);
   }
-  // // Get the JSON webhook payload for the event that triggered the workflow
-  // const payload = JSON.stringify(github.context.payload, undefined, 2);
-  // console.log(`The event payload: ${payload}`);
-  // const one = true;
-  // const two = true;
-  // if (one != two) {
-  //   throw new Error("no match!");
-  // }
-  // core.setOutput("match", "wow great job");
 } catch (error) {
   core.setFailed(error.message);
 }
