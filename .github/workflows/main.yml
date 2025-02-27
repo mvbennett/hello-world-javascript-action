@@ -20,4 +20,4 @@ jobs:
       - name: fail
         if: ${{ steps.hello.output.time }} != ${{ steps.hello.output.false }}
         uses: ./
-        exit: 1
+        run: exit 1
